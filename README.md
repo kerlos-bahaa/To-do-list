@@ -104,7 +104,10 @@ Use git push at your desired location and use the command git clone and paste th
 
 ### Install
 
+
 Install this project with:
+
+- You need to install Chrome if you want to see it working locally
 
 <!--
 Example command:
@@ -119,25 +122,15 @@ Example command:
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
+- npm start
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
+- npx stylelint "\*_/_.{css,scss}"
+- npx hint .
+- npx eslint .
 
 ### Deployment
 
