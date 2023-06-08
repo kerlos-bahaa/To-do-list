@@ -104,7 +104,6 @@ Use git push at your desired location and use the command git clone and paste th
 
 ### Install
 
-
 Install this project with:
 
 - You need to install Chrome if you want to see it working locally
@@ -131,25 +130,20 @@ To run tests, run the following command:
 - npx stylelint "\*_/_.{css,scss}"
 - npx hint .
 - npx eslint .
-
-### Deployment
-
-You can deploy this project using:
-
 <!--
 Example:
 
 ```sh
 
 ```
- -->
+
+-->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
-
 
 👤 **kerlos-bahaa**
 
