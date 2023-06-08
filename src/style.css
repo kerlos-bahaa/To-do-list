@@ -1,0 +1,51 @@
+/* h1 {
+    background-color: red;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    list-style: none;
+}
+
+.completed {
+    text-decoration: line-through;
+} */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: lightgray;
+  padding: 100px;
+}
+
+#myCard {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+#todo-list {
+  list-style-type: none;
+}
+
+#todo-list li {
+  padding: 10px;
+  border-bottom: 2px solid black;
+}
+
+#todo-list .completed {
+  text-decoration: line-through;
+  color: red;
+}
