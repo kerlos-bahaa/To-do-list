@@ -1,29 +1,29 @@
-import "./style.css";
+import './style.css';
 
 const todos = [
   {
     index: 1,
-    description: "Clean My Room",
+    description: 'Clean My Room',
     completed: true,
   },
   {
     index: 2,
-    description: "Do homework",
+    description: 'Do homework',
     completed: false,
   },
   {
     index: 3,
-    description: "Buy groceries",
+    description: 'Buy groceries',
     completed: false,
   },
   {
     index: 4,
-    description: "pray",
+    description: 'pray',
     completed: false,
   },
   {
     index: 5,
-    description: "Go for a run",
+    description: 'Go for a run',
     completed: false,
   },
 ];
