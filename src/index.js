@@ -1,7 +1,7 @@
 import './style.css';
 import {
   todos, addTask, deleteTask, editTask, loadTasks,
-} from './todo';
+} from './todo.js';
 
 // console.log(todos);
 
@@ -45,7 +45,7 @@ document.getElementById('add-task-form').addEventListener('submit', (event) => {
 document.addEventListener('click', (event) => {
   if (event.target.classList.contains('delete-button')) {
     const listItem = event.target.parentNode;
-    const index = parseInt(listItem.dataset.index);
+    const index = parseInt(listItem.dataset.index, 10);
     deleteTask(index);
     listItem.remove();
     showList();
@@ -55,7 +55,7 @@ document.addEventListener('click', (event) => {
 document.addEventListener('input', (event) => {
   if (event.target.tagName === 'SPAN') {
     const listItem = event.target;
-    const index = parseInt(listItem.dataset.index);
+    const index = parseInt(listItem.dataset.index, 10);
     const newDescription = listItem.textContent.trim();
     editTask(index, newDescription);
   }

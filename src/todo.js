@@ -1,9 +1,10 @@
-let todos = [];
+const todos = [];
 
 function loadTasks() {
-  const savedTasks = localStorage.getItem('tasks');
+  const savedTasks = localStorage.getItem("tasks");
   if (savedTasks) {
-    todos = JSON.parse(savedTasks);
+    todos.length = 0;
+    todos.push(...JSON.parse(savedTasks));
   }
 }
 
@@ -20,19 +21,17 @@ function addTask(description) {
     completed: false,
     index: todos.length,
   };
-  console.log(`task added ==> ${task.index} & ${task.description} `);
+
   todos.push(task);
-  localStorage.setItem('tasks', JSON.stringify(todos));
+  localStorage.setItem("tasks", JSON.stringify(todos));
 }
 
 function deleteTask(index) {
-  console.log(`index of task ==> ${index}`);
   todos.splice(index, 1);
-  console.log(todos);
-  updateIndexes();
-  console.log(todos);
 
-  localStorage.setItem('tasks', JSON.stringify(todos));
+  updateIndexes();
+
+  localStorage.setItem("tasks", JSON.stringify(todos));
 }
 
 function editTask(index, description) {
@@ -40,10 +39,8 @@ function editTask(index, description) {
   if (task) {
     // console.log(task);
     task.description = description;
-    localStorage.setItem('tasks', JSON.stringify(todos));
+    localStorage.setItem("tasks", JSON.stringify(todos));
   }
 }
 
-export {
-  todos, addTask, deleteTask, editTask, loadTasks,
-};
+export { todos, addTask, deleteTask, editTask, loadTasks };
