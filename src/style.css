@@ -1,66 +1,61 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: lightgray;
-    padding: 100px;
+  font-family: Arial, sans-serif;
+  background-color: lightgray;
+  padding: 100px;
 }
 
 #myCard {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 20px 20px 50px gray
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 20px 20px 50px gray;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 #todo-list {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 #todo-list li {
-    padding: 15px;
-    border-bottom: 1px solid lightgray;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    outline: none;
-    box-shadow: none;
-    border: none;
-    background-color: transparent;
-    border-bottom: 1px lightgray solid;
-    width: 500px;
-    height: 50px;
-    font-size: large;
-
+  padding: 15px;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+  width: 500px;
+  height: 50px;
+  font-size: large;
 }
 
-
 .task-item [contenteditable] {
-    outline: none !important;
-    box-shadow: none !important;
-    border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
 #todo-list .completed {
-    text-decoration: line-through;
-    color: red;
+  text-decoration: line-through;
+  color: red;
 }
 
-
-
 .no-outline {
-    outline: none;
-    box-shadow: none;
-    border: none;
-    background-color: transparent;
-    border-bottom: 1px lightgray solid;
-    width: 700px;
-    height: 50px;
-    margin-left: 32px;
-    font-weight: bold;
-    font-size: large;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px lightgray solid;
+  width: 700px;
+  height: 50px;
+  margin-left: 32px;
+  font-weight: bold;
+  font-size: large;
 }
