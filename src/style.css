@@ -1,24 +1,3 @@
-/* h1 {
-    background-color: red;
-    color: white;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    list-style: none;
-}
-
-.completed {
-    text-decoration: line-through;
-} */
-
 body {
   font-family: Arial, sans-serif;
   background-color: lightgray;
@@ -26,10 +5,12 @@ body {
 }
 
 #myCard {
+  max-width: 600px;
+  margin: 0 auto;
   background-color: white;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 20px 20px 50px gray;
 }
 
 h1 {
@@ -41,11 +22,44 @@ h1 {
 }
 
 #todo-list li {
-  padding: 10px;
-  border-bottom: 2px solid black;
+  padding: 15px;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+  width: 500px;
+  height: 50px;
+  font-size: large;
+}
+
+.task-item [contenteditable] {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.task-item input {
+  margin-right: 5px;
 }
 
 #todo-list .completed {
   text-decoration: line-through;
   color: red;
+}
+
+.no-outline {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px lightgray solid;
+  width: 700px;
+  height: 50px;
+  margin-left: 32px;
+  font-weight: bold;
+  font-size: large;
 }
