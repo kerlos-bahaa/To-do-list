@@ -2,7 +2,8 @@ import './style.css';
 import {
   todos, addTask, deleteTask, editTask, loadTasks,
 } from './todo.js';
-/** */
+import { updateTaskCompletion, clearCompleted } from './status.js';
+
 function showList() {
   loadTasks();
   const taskList = document.getElementById('todo-list');
@@ -12,21 +13,32 @@ function showList() {
     const item = document.createElement('li');
     const itemDiv = document.createElement('div');
     const checkbox = document.createElement('input');
+    const itemSpan = document.createElement('span');
+    const deleteButton = document.createElement('i');
+
     checkbox.type = 'checkbox';
     checkbox.checked = todo.completed;
-    itemDiv.className = 'task-item';
-    itemDiv.appendChild(checkbox);
 
-    const itemSpan = document.createElement('span');
+    checkbox.addEventListener('change', (event) => {
+      const index = parseInt(itemSpan.dataset.index, 10);
+      const completed = event.target.checked;
+      itemSpan.className = '';
+      updateTaskCompletion(index, completed);
+      showList();
+    });
+
     itemSpan.textContent = todo.description;
     itemSpan.className = todo.completed ? 'completed' : '';
     itemSpan.dataset.index = index;
-    itemSpan.setAttribute('contenteditable', 'true');
+    itemSpan.setAttribute('contenteditable', !todo.completed);
+    itemDiv.className = 'task-item';
+
+    itemDiv.appendChild(checkbox);
     itemDiv.appendChild(itemSpan);
 
-    const deleteButton = document.createElement('i');
     const className = 'fas fa-trash-alt text-danger float-end delete-button';
     deleteButton.className = className;
+
     item.appendChild(itemDiv);
     item.appendChild(deleteButton);
     taskList.appendChild(item);
@@ -66,4 +78,14 @@ document.addEventListener('blur', (event) => {
   }
 });
 
-document.addEventListener('DOMContentLoaded', showList);
+document.getElementById('clear-completed-button').addEventListener('click', () => {
+  clearCompleted();
+  showList();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  loadTasks();
+  showList();
+});
+
+export default { showList };
