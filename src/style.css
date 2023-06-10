@@ -31,6 +31,7 @@ h1 {
   box-shadow: none;
   border: none;
   background-color: transparent;
+  border-bottom: 1px lightgray solid;
   width: 500px;
   height: 50px;
   font-size: large;
@@ -40,6 +41,10 @@ h1 {
   outline: none !important;
   box-shadow: none !important;
   border: none !important;
+}
+
+.task-item input {
+  margin-right: 5px;
 }
 
 #todo-list .completed {

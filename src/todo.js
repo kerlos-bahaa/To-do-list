@@ -1,7 +1,7 @@
 const todos = [];
 
 function loadTasks() {
-  const savedTasks = localStorage.getItem('tasks');
+  const savedTasks = localStorage.getItem("tasks");
   if (savedTasks) {
     todos.length = 0;
     todos.push(...JSON.parse(savedTasks));
@@ -23,7 +23,7 @@ function addTask(description) {
   };
 
   todos.push(task);
-  localStorage.setItem('tasks', JSON.stringify(todos));
+  localStorage.setItem("tasks", JSON.stringify(todos));
 }
 
 function deleteTask(index) {
@@ -31,7 +31,7 @@ function deleteTask(index) {
 
   updateIndexes();
 
-  localStorage.setItem('tasks', JSON.stringify(todos));
+  localStorage.setItem("tasks", JSON.stringify(todos));
 }
 
 function editTask(index, description) {
@@ -39,10 +39,8 @@ function editTask(index, description) {
   if (task) {
     // console.log(task);
     task.description = description;
-    localStorage.setItem('tasks', JSON.stringify(todos));
+    localStorage.setItem("tasks", JSON.stringify(todos));
   }
 }
 
-export {
-  todos, addTask, deleteTask, editTask, loadTasks,
-};
+export { todos, addTask, deleteTask, editTask, loadTasks };
