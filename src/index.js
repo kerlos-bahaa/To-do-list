@@ -1,5 +1,7 @@
 import './style.css';
-import {todos, addTask, deleteTask, editTask, loadTasks} from './todo';
+import {
+  todos, addTask, deleteTask, editTask, loadTasks,
+} from './todo.js';
 /** */
 function showList() {
   loadTasks();
@@ -39,26 +41,26 @@ document.getElementById('add-task-form').addEventListener('submit', (event) => {
   document.getElementById('task-input').value = '';
 });
 
-document.addEventListener('click', function(event) {
+document.addEventListener('click', (event) => {
   if (event.target.classList.contains('delete-button')) {
     const listItem = event.target.parentNode;
-    const index = parseInt(listItem.querySelector('span').dataset.index);
+    const index = parseInt(listItem.querySelector('span').dataset.index, 10);
     deleteTask(index);
     listItem.remove();
     showList();
   }
 });
 
-document.addEventListener('input', function(event) {
+document.addEventListener('input', (event) => {
   if (event.target.tagName === 'SPAN') {
     const listItem = event.target;
-    const index = parseInt(listItem.dataset.index);
+    const index = parseInt(listItem.dataset.index, 10);
     const newDescription = listItem.textContent.trim();
     editTask(index, newDescription);
   }
 });
 
-document.addEventListener('blur', function(event) {
+document.addEventListener('blur', (event) => {
   if (event.target.tagName === 'SPAN') {
     showList();
   }
